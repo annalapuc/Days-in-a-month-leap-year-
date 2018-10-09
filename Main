@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int numer;
+int rok;
+
+int main()
+{
+    cout<<"Czy miesiac jest przestepny?"<<endl;
+    cout<<"Podaj numer miesiaca"<<endl;
+    cin>>numer;
+
+    switch (numer)
+    {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 9:
+        case 11:
+            cout<<"Miesiac ma 31 dni";
+            break;
+        case 4:
+        case 6:
+        case 8:
+        case 10:
+        case 12:
+            cout<<"Miesiac ma 30 dni";
+            break;
+        case 2:
+            {
+                cout<<"Podaj rok: ";
+                cin>>rok;
+                if ((rok%4==0)&&(rok%100!=0)||(rok%400==0))
+                {
+                    cout<<"rok jest przestepny i ma 29 dni";
+                }
+                else
+                {
+                    cout<<"rok jest nie przestepny i ma 28 dni";
+                }
+            }
+
+            break;
+    }
+    return 0;
+}
+
